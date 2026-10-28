@@ -1,0 +1,24 @@
+/* Órbita Cero */
+.o-tile { fill: rgba(255,255,255,.05); stroke: rgba(255,255,255,.07); stroke-width: .02; }
+.o-sector { fill: rgba(255,209,102,.88); stroke: #fff3c9; stroke-width: .05; }
+.o-sector.ghost { fill: rgba(255,209,102,.1); stroke: var(--yellow); stroke-dasharray: .18 .12; }
+.o-center { fill: #0c1324; stroke: var(--pink); stroke-width: .1; }
+.o-av { stroke: #fff; stroke-width: .05; }
+.o-av.o-me { stroke-width: .12; }
+.o-init { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: .42px; fill: #0c1324; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.o-hit { fill: transparent; cursor: pointer; }
+.o-hit:active { fill: rgba(255,255,255,.18); }
+.o-board { user-select: none; -webkit-tap-highlight-color: transparent; }
+.o-fall { animation: orbFall .8s ease-in both; }
+@keyframes orbFall { to { transform: translateY(1.6px); opacity: 0; } }
+.o-order { margin: 8px 0; font-weight: 800; font-size: 17px; line-height: 1.35; color: var(--yellow); }
+.o-order.o-big { font-size: clamp(20px, 2.4vw, 32px); }
+
+/* Ranking acumulado de la sala (aparece al terminar cada juego) */
+.session-panel { padding: 20px; margin-bottom: 18px; }
+.sp-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.sp-reset { padding: 8px 12px; font-size: 12px; }
+.sp-list { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 24px; }
+.sp-list li { display: grid; grid-template-columns: 24px 14px 1fr auto auto; gap: 8px; align-items: center; font-size: 15px; }
+.sp-w { font-size: 12px; }
+.sp-note { margin: 12px 0 0; color: var(--dim); font-size: 12px; }

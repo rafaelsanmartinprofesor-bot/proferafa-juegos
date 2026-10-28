@@ -1,0 +1,34 @@
+/* Escenario donde se animan las transformaciones */
+.mm-stage { position: relative; width: min(100%, 56vh); aspect-ratio: 1; margin: 0 auto; border-radius: 22px; overflow: hidden; border: 1px solid var(--border);
+  background:
+    linear-gradient(rgba(108,124,255,.75), rgba(108,124,255,.75)) center / 2px 100% no-repeat,
+    linear-gradient(rgba(108,124,255,.75), rgba(108,124,255,.75)) center / 100% 2px no-repeat,
+    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px) 0 0 / 12.5% 12.5%,
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px) 0 0 / 12.5% 12.5%,
+    rgba(255,255,255,.02); }
+.mm-ghost, .mm-fig { position: absolute; left: 32%; top: 32%; width: 36%; height: 36%; display: grid; grid-template: repeat(3, 1fr) / repeat(3, 1fr); gap: 3%; transform-origin: 50% 50%; }
+.mm-ghost i { border: 2px dashed rgba(255,255,255,.3); border-radius: 12%; }
+.mm-fig i { background: var(--mint); border-radius: 12%; box-shadow: 0 0 14px rgba(53,201,165,.4); }
+.mm-count { text-align: center; margin-top: 14px; font: 800 clamp(28px, 4vw, 52px) 'Manrope', sans-serif; color: var(--yellow); min-height: 1.2em; }
+.mm-hint { text-align: center; color: var(--muted); font-size: 14px; }
+
+/* Fichas de tipo de transformación */
+.mm-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 14px 0; }
+.mm-chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 14px; border: 2px solid var(--c); background: rgba(255,255,255,.04); font-weight: 800; font-size: 14px; }
+.mm-chip b { color: var(--c); font-size: 18px; }
+.mm-chip.empty { border-style: dashed; border-color: rgba(255,255,255,.25); color: var(--dim); min-width: 52px; justify-content: center; }
+.mm-chip.big { font-size: clamp(14px, 1.7vw, 22px); padding: 10px 16px; }
+.mm-chip .n { font: 500 11px 'DM Mono', monospace; color: var(--dim); }
+
+/* Teléfono */
+.mm-phone .mm-stage { width: min(100%, 300px); }
+.mm-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+.mm-btn { padding: 16px 8px; border-radius: 18px; border: 2px solid var(--c); background: rgba(255,255,255,.04); color: var(--text); font-weight: 800; font-size: 15px; display: grid; gap: 4px; place-items: center; }
+.mm-btn b { font-size: 28px; color: var(--c); line-height: 1; }
+.mm-btn:disabled { opacity: .35; cursor: not-allowed; }
+.mm-lives { letter-spacing: 2px; }
+.mm-rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.mm-rank li { display: grid; grid-template-columns: 22px 14px 1fr auto auto; gap: 8px; align-items: center; font-size: 14px; }
+.mm-rank li.out { opacity: .45; }
+.mm-rank .ok { color: var(--mint); font-weight: 800; }
+.mm-rank .bad { color: var(--red); font-weight: 800; }

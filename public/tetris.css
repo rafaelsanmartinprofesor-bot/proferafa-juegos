@@ -1,0 +1,54 @@
+/* Selector de minijuego en el lobby */
+.game-picker { padding: 20px; margin-bottom: 18px; }
+.game-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 12px; }
+.game-card { text-align: left; display: grid; gap: 6px; padding: 16px; border-radius: 18px; border: 2px solid var(--border); background: rgba(255,255,255,.03); color: var(--text); }
+.game-card .gc-icon { font-size: 28px; }
+.game-card strong { font-size: 17px; }
+.game-card .gc-desc { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.game-card em { font: normal 500 10px 'DM Mono', monospace; letter-spacing: .14em; color: var(--mint); }
+.game-card.selected { border-color: var(--yellow); background: rgba(255,209,102,.08); box-shadow: 0 0 0 3px rgba(255,209,102,.15); }
+
+/* Plano del Encaje vectorial */
+.tb { display: block; width: min(100%, 66vh); margin: 0 auto; touch-action: manipulation; }
+.tb .g { stroke: rgba(255,255,255,.09); stroke-width: .03; }
+.tb .g.ax { stroke: rgba(108,124,255,.8); stroke-width: .07; }
+.tb .tl { font-family: 'DM Mono', monospace; font-size: .5px; fill: var(--dim); }
+.t-target { fill: rgba(255,209,102,.1); stroke: var(--yellow); stroke-width: .07; stroke-dasharray: .18 .12; }
+.t-target.solved { fill: rgba(53,201,165,.4); stroke: var(--mint); stroke-dasharray: none; }
+.t-start { fill: #aab6d6; opacity: .92; }
+.t-ghost { fill: var(--c); opacity: .85; stroke: #fff; stroke-width: .05; }
+.t-ghost.fit { stroke: var(--mint); stroke-width: .13; }
+
+/* Panel del proyector */
+.t-rank { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.t-rank li { display: grid; grid-template-columns: 24px 14px 1fr auto; gap: 8px; align-items: center; font-size: 14px; }
+.t-pos { font: 500 12px 'DM Mono', monospace; color: var(--dim); }
+.t-dotc { width: 12px; height: 12px; border-radius: 50%; background: var(--c); }
+.t-nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; }
+.t-pts { font-weight: 800; color: var(--yellow); }
+.t-pts small { color: var(--mint); font-weight: 700; }
+.t-sol { margin: 8px 0 12px; padding-left: 20px; color: var(--muted); line-height: 1.8; }
+.t-muted { color: var(--dim); font-size: 13px; }
+.t-hit { margin: 10px 0; padding: 10px 12px; border-radius: 14px; background: rgba(240,108,180,.15); border: 1px solid rgba(240,108,180,.5); font-size: 13px; line-height: 1.5; }
+
+/* Teléfono */
+.t-phone { text-align: center; }
+.t-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.t-score { font-weight: 800; color: var(--yellow); }
+.t-info { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.t-seq { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; min-height: 36px; margin: 10px 0; align-items: center; }
+.sq { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 99px; background: var(--panel-strong); border: 1px solid var(--border); font-size: 13px; font-weight: 700; }
+.sq b { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--mint); color: #0c1324; font-size: 11px; }
+.t-ops { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.opbtn { padding: 12px 8px; border-radius: 14px; border: 1px solid var(--border); background: var(--panel-strong); color: var(--text); font-weight: 700; font-size: 13px; }
+.opbtn.wide { width: 100%; margin-top: 8px; border-color: rgba(255,209,102,.5); }
+.opbtn:disabled, .t-actions .button:disabled { opacity: .35; cursor: not-allowed; }
+.t-tr { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.t-status { min-height: 22px; margin: 10px 0; font-size: 13px; color: var(--muted); }
+.t-status.ok { color: var(--mint); font-weight: 800; }
+.t-actions { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 8px; }
+.t-item { margin-top: 14px; padding: 14px; border-radius: 18px; border: 1px solid rgba(240,108,180,.5); background: rgba(240,108,180,.1); display: grid; gap: 8px; text-align: left; }
+.t-item span { font-size: 13px; color: var(--muted); }
+.t-targets { display: flex; flex-wrap: wrap; gap: 6px; max-height: 38vh; overflow-y: auto; }
+.t-target-btn { padding: 8px 12px; border-radius: 99px; border: 2px solid var(--c); background: transparent; color: var(--text); font-weight: 700; font-size: 13px; }
+.t-target-btn small { color: var(--dim); }
